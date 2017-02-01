@@ -1,0 +1,12 @@
+
+email_address:
+  valid: ~email_address
+  invalid: ~randomize ['test.com' , '@test.com', 'test@com']
+
+password:
+  valid: ~characters(character_count = 6)
+  invalid: ~characters(character_count = 5)
+
+postcode:
+  valid: ~randomize ['SE1 2QG', 'sw1a 1aa', 'N11AA']
+  invalid: ~randomize ['12345' , 's2 2a', 'ABCD']
